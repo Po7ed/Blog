@@ -1,3 +1,17 @@
+---
+title: Valuable Problems
+date: 2024-07-16 14:15:27
+tags: Summary
+---
+
+本文存放了好题的简要题意和题解，方便复习回顾。
+
+<!-- more -->
+
+## Table of Contents
+
+P6503,P6649,P6812,P7073,P7074,P7167,P7913,P7915,P8059,P8287,P8675,P8815,P8733,P8801,P8805,P9209,P9364,P9474,P9751,P10134,P10190,P10277,P10278,**P10308**,
+
 ## [](https://www.luogu.com.cn/problem/)
 
 ### 题意
@@ -133,7 +147,7 @@ $n,q\le 10^6,a_i\le 10^9$。
 
 ### 题意
 
-$n$ 行 $m$ 列方格图从左上角走到右下角，不能重复走一个方格，最大值路径上数的和。
+$n$ 行 $m$ 列方格图从左上角走到右下角，不能重复走一个方格，每次可向右、上、下走，最大值路径上数的和。
 
 ### 思路
 
@@ -614,7 +628,7 @@ $n\le 10^4,m\le 2\times 10^4,k\le 100,a_i\le 10^6$。
 
 <https://www.luogu.com.cn/record/134470526>
 
-## ? [P10134](https://www.luogu.com.cn/problem/P10134)
+## [P10134](https://www.luogu.com.cn/problem/P10134)
 
 ### 题意
 
@@ -667,6 +681,34 @@ $n\le 10^5,C\le 10^9,T\le 20$。
 <https://www.luogu.com.cn/record/164344021>
 
 <https://www.luogu.com.cn/record/165903355>
+
+## [P10190](https://www.luogu.com.cn/problem/P10190)
+
+### 题意
+
+$n$ 个矩形目标依次出现、消失（每个时刻最多只存在一个目标）。每个目标的左侧边在同一条直线 $x=X$ 上。$4n$ 头牛向矩形目标顶点射箭，要求箭不可穿过目标内部。每头牛有固定的射击角度，用斜率表示，即牛射击时箭的轨迹（直线）的斜率必须为给定的值。牛均站在 $y$ 轴上。求最远奶牛之间的最小距离是多少，或报告无解。多测。
+
+$n,\sum n\le 4\times 10^4,T\le 10,A\le 10^9$。
+
+### 思路
+
+<details>
+<summary>点击查看题解</summary>
+
+<https://usaco.org/current/data/sol_prob1_silver_feb24.html>
+
+考察：**二分**，**贪心**。
+
+首先可以发现右上角的顶点只能使用负斜率牛射，右下角的顶点只能用正斜率牛，反之会穿过目标内部。也就是说，我们至少分别需要 $n$ 值正、负斜率牛，否则无解。
+
+剩下的 $2n$ 头牛分给左侧顶点。可以对左侧所有点按纵坐标排序，纵坐标大的分配负斜率牛，纵坐标小的分配正斜率牛。可以证明这样一定最优。
+
+考虑具体如何安排。
+
+</details>
+
+### 代码
+
 
 ## [P10277](https://www.luogu.com.cn/problem/P10277)
 
@@ -734,7 +776,7 @@ $n\le 10^5,P\le 2\times 10^5,x,y\le 10^9$。
 
 <https://www.luogu.com.cn/record/153949576>
 
-## ? [P10308](https://www.luogu.com.cn/problem/P10308)
+## [P10308](https://www.luogu.com.cn/problem/P10308)
 
 ### 题意
 
